@@ -1,24 +1,14 @@
-# README
+# バックエンド課題 A
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## テーブル
 
-Things you may want to cover:
+- Itemテーブル
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+| Field      | Type        | Null | Key | Default | Extra          |
+|------------|-------------|------|-----|---------|----------------|
+| id         | bigint      | NO   | PRI | NULL    | auto_increment |
+| name       | varchar(30) | NO   | UNI | NULL    |                |
+| price      | int         | NO   |     | NULL    |                |
+| created_at | datetime(6) | NO   |     | NULL    |                |
+| updated_at | datetime(6) | NO   |     | NULL    |                |
