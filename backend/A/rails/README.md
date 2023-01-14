@@ -21,11 +21,11 @@
 
 POST /items
 ```
-curl --location --request GET 'http://localhost:9001/items' \
+curl -i --location --request GET 'http://localhost:9001/items' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-  "name": 1111,
-  "price": 1111
+  "name": apple,
+  "price": 200
 }'
 ```
 
@@ -52,7 +52,7 @@ curl --location --request GET 'http://localhost:9001/items' \
 - Request
 
 ```
-curl --location --request GET 'http://localhost:9001/items'
+curl -i --location --request GET 'http://localhost:9001/items'
 ```
 
 - Response
