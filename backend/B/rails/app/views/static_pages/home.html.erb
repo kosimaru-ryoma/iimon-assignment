@@ -17,6 +17,9 @@
     <div class="row mt-4">
       <% if logged_in? %>
         <div class="col-12 text-center mt-3 mb-3">
+          <%= link_to "Posts", posts_url, class: "text-white btn btn-info" %>
+        </div>
+        <div class="col-12 text-center mt-3 mb-3">
           <%= link_to "Profile", current_user, class: "text-white btn btn-primary" %>
         </div>
       <% else %>

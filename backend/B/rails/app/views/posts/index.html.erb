@@ -1,0 +1,45 @@
+<% if logged_in? %>
+
+<%= form_with(url: "/posts", model: @post, local: true) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="form-gruop mt-3 mx-3">
+    <h4>Post Form</h4>
+    <%= f.text_area :content, required: true, placeholder: "コメントする", class: 'form-control' %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-primary mt-3 mx-3" %>
+<% end %>
+
+<% else %>
+  <h3 class="mt-4 ms-4">
+  ログインしてあなたも投稿してみましょう!
+  <%= link_to "Login", login_path, class: "ms-4" %>
+  </h3>
+<% end %>
+
+
+<div class="container align-items-center">
+  <div class="row">
+    <div class="col-12 mt-5">
+      <h3 class="text-center">Posts</h3>
+
+      <% @posts.each do |p| %>
+        <div class="contents border-bottom mt-2">
+          <span class="fs-6 text-muted">
+            ユーザー: <%= p.user.name %>
+          </span>
+          <div class="mt-1">
+            <span class="fs-5 ms-2"><%= p.content %></span>
+            <div class="text-end">
+              <span class="timestamp fs-6 text-muted"> created <%= time_ago_in_words(p.created_at) %> ago.
+                <% if current_user?(p.user) %>
+                  <%= link_to "削除", p, data: { "turbo-method": :delete,turbo_confirm: "You sure?" } %>
+                <% end %>
+              </span>
+            </div>
+          </div>
+        </div>
+      <%end%>
+
+    </div>
+  </div>
+</div>
