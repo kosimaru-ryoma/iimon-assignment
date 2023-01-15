@@ -6,27 +6,18 @@
           <h1 class="lh-sm fs-lg-6 fs-xxl-7 mt-5">
             Wlecome to バックエンド B
           </h1>
-          <p class="mt-4">
-          バックエンド課題Bのトップページです。 <br/>
-          ユーザー作成機能、コメント閲覧機能、コメント投稿機能(ログイン時のみ) <br/>
-          ご確認願います。
-          </p>
+          <p class="mt-4">バックエンド課題Bのトップページです。 <br/>
+          右上のログインページよりユーザー作成、ログイン願います。</p>
         </div>
       </div>
     </div>
     <div class="row mt-4">
-      <% if logged_in? %>
-        <div class="col-12 text-center mt-3 mb-3">
-          <%= link_to "Profile", current_user, class: "text-white btn btn-primary" %>
-        </div>
-      <% else %>
-        <div class="col-12 text-center mt-3 mb-3">
-          <%= link_to "Login", login_path, class: "text-white btn btn-primary" %>
-        </div>
       <div class="col-12 text-center mt-3 mb-3">
-          <%= link_to "Sign Up", signup_path, class: "text-dark btn btn-warning" %>
+        <button type="button" class="btn btn-primary">Login</button>
       </div>
-      <% end %>
+      <div class="col-12 text-center mt-3 mb-3">
+        <button type="button" class="btn btn-warning">Sign Up</button>
+      </div>
     </div>
   </div>
 </div>
