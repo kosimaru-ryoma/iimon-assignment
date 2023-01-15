@@ -1,0 +1,38 @@
+<div class="container align-items-center">
+
+  <div class="text-center mt-5">
+  <h1>Sign up</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <%= form_with(model: @user, local: true) do |f| %>
+        <%= render 'shared/error_messages' %>
+
+        <div class="form-gruop mt-3">
+          <%= f.label :name %>
+          <%= f.text_field :name, required: true, class: 'form-control'%>
+        </div>
+
+        <div class="form-gruop mt-3">
+          <%= f.label :email %>
+          <%= f.email_field :email, required: true, class: 'form-control' %>
+        </div>
+
+        <div class="form-gruop mt-3">
+          <%= f.label :password %>
+          <%= f.password_field :password, required: true,  class: 'form-control' %>
+        </div>
+
+        <div class="form-gruop mt-3">
+          <%= f.label :password_confirmation, "Confirmation" %>
+          <%= f.password_field :password_confirmation, required: true,  class: 'form-control' %>
+        </div>
+
+        <div class="mt-5">
+          <%= f.submit "Create my account", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
