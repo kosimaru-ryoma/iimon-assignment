@@ -6,12 +6,15 @@ export const useInputWordForm = () => {
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    const text = addedWordRef.current?.value;
-    if (text == null) {
+
+    if (addedWordRef.current == null) {
       alert('文字を入力してください');
       return;
     }
+
+    const text = addedWordRef.current.value;
     setAddedWords([...addedWords, text]);
+    addedWordRef.current.value = '';
   };
 
   const onClickDelete = (key: number) => {
