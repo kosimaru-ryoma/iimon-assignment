@@ -1,34 +1,23 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
 import './App.css';
+import { InputWordForm } from './components/InputWordForm';
+import { useInputWordForm } from './components/useInputWordForm';
+import { WordList } from './components/WordList';
 
-function App() {
-  const [count, setCount] = useState(0);
+export const App = () => {
+  const { addedWords, addedWordRef, handleSubmit, onClickDelete } =
+    useInputWordForm();
 
   return (
     <div className="App">
       <div className="contents">
-        <form className="add-form" action="/" method="post">
-          <div className="add-area">
-            <input className="add-input"></input>
-            <button className="add-button" value="送信">
-              追加
-            </button>
-          </div>
-        </form>
-        <div className="contents-area">
-          <div className="add-contents">
-            <p className="delete-box">X</p>
-            <p className="add-word">test</p>
-          </div>
-          <div className="add-contents">
-            <p className="delete-box">X</p>
-            <p className="add-word">strawberry</p>
-          </div>
-        </div>
+        <InputWordForm
+          addedWordRef={addedWordRef}
+          handleSubmit={handleSubmit}
+        />
+        {addedWords.length > 0 && (
+          <WordList wordList={addedWords} onClickDelete={onClickDelete} />
+        )}
       </div>
     </div>
   );
-}
-
-export default App;
+};
