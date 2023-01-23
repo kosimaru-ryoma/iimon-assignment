@@ -1,14 +1,14 @@
 type Props = {
   handleSubmit: (e: { preventDefault: () => void }) => void;
-  addedWordRef: React.RefObject<HTMLInputElement>;
+  inputWordRef: React.RefObject<HTMLInputElement>;
 };
 
-export const InputWordForm = ({ addedWordRef, handleSubmit }: Props) => {
+export const InputWordForm = ({ inputWordRef, handleSubmit }: Props) => {
   return (
-    <form className="add-form" onSubmit={handleSubmit}>
-      <div className="add-area">
-        <input className="add-input" required ref={addedWordRef}></input>
-        <button className="add-button" value="送信">
+    <form className="input-form" onSubmit={handleSubmit}>
+      <div className="input-area">
+        <input className="input-field" required ref={inputWordRef}></input>
+        <button className="input-button" value="送信">
           追加
         </button>
       </div>
