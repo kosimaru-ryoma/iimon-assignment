@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  border-width: 0px;
+  margin: 0;
+  list-style-type: none;
+}
+
+.contents {
+  width: 300px;
+  margin: 100px auto;
+  font-size: 16px;
+}
+
+.input-area {
+  height: 30px;
+  text-align:left
+}
+
+.input-field {
+  height: 100%;
+  width: 83%;
+  padding: 1px;
+  border: 1px solid navy;
+}
+
+.input-button {
+  height: 100%;
+  width: 15%;
+  margin-left: 5px;
+  border: 1px;
+  color: white;
+  background-color: navy;
+  cursor: pointer;
+}
+
+.word-list {
+  margin-top: 20px;
+}
+
+.word-area {
+  height: 50px;
+  line-height: 50px;
+  border: solid 1px navy;
+  margin-top: 5px;
+}
+
+.delete-box {
+  float: left;
+  height: 100%;
+  width: 50px;
+  background-color: navy;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.word {
+  float: left;
+  width: 225px;
+  margin-left: 20px;
+}
