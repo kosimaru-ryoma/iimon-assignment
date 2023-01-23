@@ -5,10 +5,10 @@ type Props = {
 
 export const WordList = ({ wordList, onClickDelete }: Props) => {
   return (
-    <div className="contents-area">
+    <div className="word-list">
       {wordList.map((word, index) => {
         return (
-          <div key={index} className="add-contents">
+          <div key={index} className="word-area">
             <p
               word-id={index}
               className="delete-box"
@@ -16,7 +16,7 @@ export const WordList = ({ wordList, onClickDelete }: Props) => {
             >
               X
             </p>
-            <p className="add-word">{word}</p>
+            <p className="word">{word}</p>
           </div>
         );
       })}

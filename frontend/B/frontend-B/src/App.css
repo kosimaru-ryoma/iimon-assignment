@@ -12,19 +12,19 @@
   font-size: 16px;
 }
 
-.add-area {
+.input-area {
   height: 30px;
   text-align:left
 }
 
-.add-input {
+.input-field {
   height: 100%;
   width: 83%;
   padding: 1px;
   border: 1px solid navy;
 }
 
-.add-button {
+.input-button {
   height: 100%;
   width: 15%;
   margin-left: 5px;
@@ -34,11 +34,11 @@
   cursor: pointer;
 }
 
-.contents-area {
+.word-list {
   margin-top: 20px;
 }
 
-.add-contents {
+.word-area {
   height: 50px;
   line-height: 50px;
   border: solid 1px navy;
@@ -55,7 +55,7 @@
   cursor: pointer;
 }
 
-.add-word {
+.word {
   float: left;
   width: 225px;
   margin-left: 20px;
