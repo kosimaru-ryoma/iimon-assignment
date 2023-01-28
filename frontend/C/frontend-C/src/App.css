@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  border-width: 0px;
+  margin: 0;
+  list-style-type: none;
+}
+
+.contents {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  margin: 100px auto 0 auto;
+}
+
+.word-contents {
+  width: 300px;
+  text-align: center;
+}
+
+.word-list {
+  min-height: 450px;
+  border: solid 1px navy;
+}
+
+.word {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 0;
+  border-bottom: solid 1px navy;
+  font-size: 16px;
+}
+
+.button-area {
+  margin: 30px auto 0 auto;
+}
+
+.move-button {
+  height: 40px;
+  width: 60%;
+  margin-top: 0 auto;
+  background-color: navy;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
