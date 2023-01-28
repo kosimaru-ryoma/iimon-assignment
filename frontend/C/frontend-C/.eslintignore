@@ -1,0 +1,7 @@
+node_modules
+yarn.lock
+public
+*.config.js
+*.config.ts
+.*lintrc.js
+.*lintrc.cjs
