@@ -1,8 +1,15 @@
 import './App.css';
-import React from 'react';
+
+import { LeftSideWordList } from './components/LeftSideWordList';
+import { RightSideWordList } from './components/RightSideWordList';
 
 const App = () => {
-  return <div className="App"></div>;
+  return (
+    <div className="contents">
+      <LeftSideWordList />
+      <RightSideWordList />
+    </div>
+  );
 };
 
 export default App;
